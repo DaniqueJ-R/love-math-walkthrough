@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
+                document.getElementById('answer-box').value = "";
+            } else if (this.getAttribute("data-type") === "reset") {
+                document.getElementById('answer-box').value = "";
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
